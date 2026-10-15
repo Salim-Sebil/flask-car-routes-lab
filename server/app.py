@@ -11,9 +11,9 @@ def index():
 @app.route('/<string:models>')
 def get_model(models):
     if models in existing_models:
-        return f"Model: {models}"
+        return f"Flatiron {models} is in our fleet!"
     else:
-        return "Model not found!"
+        return f"No models called {models} exists in our catalog"
 
 if __name__ == '__main__':
     app.run(port=5555, debug=True)
